@@ -1,5 +1,5 @@
 
-export const databaseName = 'currency-converter-007damiendoumer-1';
+export const databaseName = 'currency convertor';
 
 export default class IDBManager{
 
