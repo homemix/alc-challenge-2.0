@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Currency Converter</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" >
+ </head>
+  <body>
+    <div class="row">
+    <div class="center-block" style="width:400px;">
+    <form class="form-horizontal">
+      <fieldset>
+      <legend>Currency Converter</legend>
+          <div class="form-group">
+    <label for="amount">Enter Amount</label>
+    <input type="text" class="form-control" id="amountToConvert" name="amountToConvert">
+  </div>
+ <div class="form-group">
+    <label for="fromCurrency"> from Currency</label>
+    <select class="form-control" id="fromCurrency" name="fromCurrency">
+      
+     
+    </select>
+  </div>
+   <div class="form-group">
+    <label for="toCurrency">to Currency</label>
+    <select class="form-control" id="toCurrency" name="toCurrency">
+     
+    </select>
+  </div>
+ 
+  <button type="button" onclick="calculateCurrency()"  class="btn btn-default" id="convert">Convert</button>
+<div class="form-group">
+    <label for="output">Output</label>
+    <input type="text" class="form-control" id="output" name="output" readonly>
+  </div>
+      </fieldset>
+    </form>
+	</div>
+	</div>
+		
+ 
+<script>
+// Register the service worker
+
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('sw.js').then(function(registration) {
+    // Registration was successful
+    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+}).catch(function(err) {
+    // registration failed :(
+    	console.log('ServiceWorker registration failed: ', err);
+    });
+}
+/*
+//function
+import Converter from 'main/converter.js';
+import lastQuery from 'main/converter.js';
+
+import IDBManager from 'main/idbManager.js';
+
+let idbMan = new IDBManager();
+function calculateCurrency()
+{
+const amountEntry = document.getElementById('amountToConvert');
+const convertedValueEntry = document.getElementById('output');
+const toSelect = document.getElementById("toCurrency");
+const fromSelect = document.getElementById("fromCurrency");
+
+    let amount = amountEntry.value;
+
+    if(amount)
+    {        
+        let fromCurrency = fromSelect.options[fromSelect.selectedIndex].innerHTML;
+        let toCurrency = toSelect.options[toSelect.selectedIndex].innerHTML;
+
+        let regExp = /\(([^)]+)\)/;
+        let fromCurrencyKey = regExp.exec(fromCurrency)[1];
+        let toCurrencyKey = regExp.exec(toCurrency)[1];
+
+        if(fromCurrencyKey == toCurrencyKey)
+        {
+            convertedValueEntry.value = amount;
+        }
+        else
+        {
+            converter.convertCurrency(amount, fromCurrencyKey, toCurrencyKey, (error, result) => 
+            {
+                convertedValueEntry.value = result;
+				console.log(result);
+                if(result)
+                {
+                    convertedValueEntry.value = result;
+                }
+                else
+                {
+                    alert("An error occured while making the request"+error);
+                }
+            });
+        }
+    }
+    else
+    {
+        alert("please enter the amount which you wish to convert");
+    }
+}
+*/
+</script> 
+   <script src="js/idb.js" type="module"></script>
+        <script src="js/main/main.js" type="module"></script>  
+  </body>
+  </html>
+	
