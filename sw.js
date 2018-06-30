@@ -6,11 +6,11 @@ var cacheName = 'v1';
 var cacheFiles = [
   'index.html',
 				'/',
-                'js/main/idbManager.js',
+                'js/data/idbManager.js',
                 'js/idb.js',
                 'sw.js',
-                'js/main/converter.js',
-                'js/main/main.js',
+                'js/data/converter.js',
+                'js/data/data.js',
                 'https://free.currencyconverterapi.com/api/v5/currencies',
 				'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
 ]
