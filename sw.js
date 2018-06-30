@@ -12,7 +12,7 @@ var cacheFiles = [
                 'js/data/converter.js',
                 'js/data/data.js',
                 'https://free.currencyconverterapi.com/api/v5/currencies',
-				'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
+				'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'
 ]
 
 
